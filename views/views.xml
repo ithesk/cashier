@@ -1,28 +1,26 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="cashierr.list">
-      <field name="name">cashierr list</field>
-      <field name="model">cashierr.cashierr</field>
+
+    <record model="ir.ui.view" id="cashier.cash_list">
+      <field name="name">cashier list</field>
+      <field name="model">cashier.cash</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="cashierr.action_window">
-      <field name="name">cashierr window</field>
-      <field name="res_model">cashierr.cashierr</field>
+
+    <record model="ir.actions.act_window" id="cashier.action_cash_window">
+      <field name="name">cashier window</field>
+      <field name="res_model">cashier.cash</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
 <!--
@@ -41,20 +39,20 @@
 -->
 
     <!-- Top menu item -->
-<!--
-    <menuitem name="cashierr" id="cashierr.menu_root"/>
--->
+
+    <menuitem name="cashier" id="cashier.menu_root"/>
+
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="cashierr.menu_1" parent="cashierr.menu_root"/>
-    <menuitem name="Menu 2" id="cashierr.menu_2" parent="cashierr.menu_root"/>
--->
+
+    <menuitem name="Add" id="cashier.menu_1" parent="cashier.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="cashierr.menu_2" parent="cashierr.menu_root"/> -->
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="cashierr.menu_1_list" parent="cashierr.menu_1"
-              action="cashierr.action_window"/>
-    <menuitem name="Server to list" id="cashierr" parent="cashierr.menu_2"
-              action="cashierr.action_server"/>
--->
+
+    <menuitem name="Closing" id="cashier.menu_1_cash_list" parent="cashier.menu_1"
+              action="cashier.action_cash_window"/>
+    <!-- <menuitem name="Server to list" id="cashierr" parent="cashierr.menu_2"
+              action="cashierr.action_server"/> -->
+
   </data>
 </odoo>
